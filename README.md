@@ -2,7 +2,7 @@
 
 Monthly and seasonal patterns of groundwater storage across the divisions of Bangladesh in 2024, using NASA's GLDAS-2.2 land surface model (with GRACE satellite data assimilation) in Google Earth Engine.
 
-![Monthly groundwater storage by division](figures/gws_timeseries_2024.png)
+![Monthly groundwater storage by division](figures/figuresgws_timeseries_2024.png)
 
 ## Objective
 To describe how groundwater storage changes through the year in Bangladesh, and which divisions experience the largest seasonal swings between the dry season and the monsoon.
@@ -31,11 +31,6 @@ All processing was done in Google Earth Engine (`gee/bd_groundwater_gldas_2024.j
 
 ![Groundwater storage, September and December 2024](figures/gws_sep_dec_2024.png)
 
-**Division summary**
-
-| Division | Annual mean storage (mm) | Seasonal amplitude (mm) |
-|---|---|---|
-| FILL FROM `data/gws_division_summary_2024.csv` | | |
 
 Key findings:
 - Groundwater storage declined through the dry season, reaching its lowest point in **[month]**, and rose sharply with the monsoon, peaking between **July and October**.
@@ -44,14 +39,12 @@ Key findings:
 
 
 ## How to Reproduce
-1. Open the script in the Earth Engine Code Editor: [Open in GEE](PASTE_GET_LINK_HERE)
-   or paste `gee/bd_groundwater_gldas_2024.js` into the [Code Editor](https://code.earthengine.google.com/).
+1. Open the script in the Earth Engine Code Editor: [Open in GEE](https://code.earthengine.google.com/14838382090bc57e568f40f0ae776e0f)
 2. Run it. All data comes from the public Earth Engine catalog, so no uploads are needed.
 3. The Console shows the time series chart, the division summary, and the colour scale used for the maps.
 4. Export the CSV tables and rasters from the Tasks tab.
 
 ## Limitations
-- **One year only:** this shows seasonal dynamics in 2024, not a long-term trend. Detecting depletion or recovery needs a multi-year record (GLDAS-2.2 starts in 2003).
 - **Modelled, not observed:** groundwater storage comes from a land surface model constrained by GRACE satellite gravity data, not from observation wells.
 - **Coarse resolution:** at 0.25°, each division contains only a limited number of grid cells, and GRACE's own resolution is much coarser (a few hundred km), so local differences within divisions are not resolved.
 
